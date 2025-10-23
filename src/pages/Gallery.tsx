@@ -7,6 +7,7 @@ import galleryBg from "@/assets/events.webp"; // Reusing the events background
 import { useState } from "react";
 import { allImages, categories } from "@/data/gallery";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Gallery = () => {
   const [filter, setFilter] = useState("All");
@@ -18,6 +19,13 @@ const Gallery = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Gallery | NSS Club</title>
+        <meta
+          name="description"
+          content="A glimpse into the vibrant life and events at NSS Club. Explore our gallery of moments captured during our various activities."
+        />
+      </Helmet>
       <div className="min-h-screen bg-background">
         <Navbar />
 

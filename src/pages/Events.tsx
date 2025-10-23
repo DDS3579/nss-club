@@ -14,10 +14,18 @@ import { upcomingEvents, pastEvents } from "@/data/events";
 import eventsBg from "@/assets/events.webp";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Events = () => {
   return (
     <>
+      <Helmet>
+        <title>Events | NSS Club</title>
+        <meta
+          name="description"
+          content="Stay updated with the latest events, workshops, and competitions from the NSS Club. Join us for exciting opportunities to learn, grow, and connect."
+        />
+      </Helmet>
       <div className="min-h-screen bg-background">
         <Navbar />
 

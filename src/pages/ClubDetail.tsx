@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Mail, ArrowLeft, User, Users } from "lucide-react";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const ClubDetail = () => {
   const { clubName } = useParams();
@@ -100,6 +101,10 @@ const ClubDetail = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{`${club.name} | NSS Club`}</title>
+        <meta name="description" content={club.description} />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}
